@@ -20,7 +20,7 @@ class Application
       if @@items.include?(item_to_add)
         cart << item_to_add
       else
-        
+        resp.write("We don't have that item")
       end
     elsif req.path.match(/search/)
       search_term = req.params["q"]
